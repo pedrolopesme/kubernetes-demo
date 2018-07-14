@@ -28,6 +28,6 @@ fmt:
 	@echo "Running gofmt for all project files"
 	$(GOFMT) -w *.go
 
-kubernets-apply:
+kubernetes-apply:
 	@echo "Applying demoapi deployment config"
 	kubectl apply -f deployment.yaml
