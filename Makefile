@@ -20,6 +20,10 @@ run:
 	$(GOBUILD) -o $(BINARY_NAME)
 	$(BINARY_NAME) $(filter-out $@,$(MAKECMDGOALS))
 
+run-docker:
+	@echo "Running Docker container"
+	docker run -it --rm  -p 8080:8080 demo-api
+
 fmt:
 	@echo "Running gofmt for all project files"
 	$(GOFMT) -w *.go
