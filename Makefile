@@ -11,6 +11,10 @@ build:
 	@echo "Building API"
 	$(GOBUILD) -o $(BINARY_NAME) -v
 
+build-docker:
+	@echo "Building docker image"
+	docker build -t demo-api .
+
 run:
 	@echo "Running"
 	$(GOBUILD) -o $(BINARY_NAME)
